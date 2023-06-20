@@ -41,7 +41,6 @@ def filter_numbers(args: list, filter_types: str):
     <<< [2, 4]
     """
     if filter_types == ODD:
-        # return [i for i in args if i % 2 != 0]
         return list(filter(lambda x: x % 2 != 0, args))
     if filter_types == EVEN:
         return list(filter(lambda x: x % 2 == 0, args))
@@ -49,6 +48,3 @@ def filter_numbers(args: list, filter_types: str):
         return [i for i in args if is_prime(i)]
     else:
         raise TypeError
-
-
-print(filter_numbers([1, 2, 3], filter_types=ODD))
